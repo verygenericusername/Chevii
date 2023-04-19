@@ -8,7 +8,6 @@
 
 <button id="button" onclick="closeWindow()">Close Window</button>
 <script>
-  var button = document.getElementById("button");
 
 function openGame()  {
 
@@ -31,12 +30,12 @@ win.document.body.appendChild(iframe)
 }
 
 openGame();
-  button.click();
-  
-function closeWindow() {
-window.close();
-}
 
+var button = document.getElementById("button");
+button.click();
+function closeWindow() {
+  window.close();
+}
 </script>
 
 </body>
