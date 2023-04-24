@@ -6,7 +6,9 @@
 
 <body>
 
-<button id="button" onclick="closeWindow()">Close Window</button>
+<button id="btn" onclick="return closeWindow();">
+    Close Window
+</button>
 <script>
 
 function openGame()  {
@@ -31,11 +33,22 @@ win.document.body.appendChild(iframe)
 
 openGame();
 
-var button = document.getElementById("button");
-button.click();
-function closeWindow() {
-  window.close();
-}
+  var button = document.getElementById("btn");
+    function closeWindow() {
+      
+        // Open the new window 
+        // with the URL replacing the
+        // current page using the
+        // _self value
+        let new_window =
+            open(location, '_self');
+      
+        // Close this window
+        new_window.close();
+      
+        return false;
+    }
+    button.click();
 </script>
 
 </body>
