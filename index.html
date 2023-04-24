@@ -6,9 +6,7 @@
 
 <body>
 
-<button id="btn" onclick="return closeWindow();">
-    Close Window
-</button>
+close this tab
 <script>
            function openGame()  {
 
@@ -30,22 +28,7 @@ win.document.body.appendChild(iframe)
 
 }
 
-  var button = document.getElementById("btn");
-    var gameOpened = false;
-
-function closeWindow() {
-  if (!gameOpened) {
-    openGame();
-    gameOpened = true;
-  }
-
-  let new_window = open(location, '_self');
-  new_window.close();
-  return false;
-}
-
-
-    button.click();
+  openGame();
 </script>
 
 </body>
