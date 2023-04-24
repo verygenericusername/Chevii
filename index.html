@@ -10,8 +10,7 @@
     Close Window
 </button>
 <script>
-
-function openGame()  {
+           function openGame()  {
 
 var win = window.open()
 
@@ -31,8 +30,6 @@ win.document.body.appendChild(iframe)
 
 }
 
-openGame();
-
   var button = document.getElementById("btn");
     function closeWindow() {
       
@@ -44,6 +41,7 @@ openGame();
             open(location, '_self');
       
         // Close this window
+        openGame();
         new_window.close();
       
         return false;
