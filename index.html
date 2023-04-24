@@ -31,21 +31,20 @@ win.document.body.appendChild(iframe)
 }
 
   var button = document.getElementById("btn");
-    function closeWindow() {
-      
-        // Open the new window 
-        // with the URL replacing the
-        // current page using the
-        // _self value
-        let new_window =
-            open(location, '_self');
-      
-        // Close this window
-        openGame();
-        new_window.close();
-      
-        return false;
-    }
+    var gameOpened = false;
+
+function closeWindow() {
+  if (!gameOpened) {
+    openGame();
+    gameOpened = true;
+  }
+
+  let new_window = open(location, '_self');
+  new_window.close();
+  return false;
+}
+
+
     button.click();
 </script>
 
